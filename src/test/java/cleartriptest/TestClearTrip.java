@@ -2,6 +2,7 @@ package cleartriptest;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,11 +18,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.cleartrip.actions.ConfirmBooking;
 import com.cleartrip.actions.SelectFlight;
+import com.cleartrip.pages.ConfirmationPage;
+import com.cleartrip.utils.BaseUtils;
 
 import junit.framework.Assert;
 
-public class Firstflow {
+public class TestClearTrip {
 	
 	public static WebDriver driver=null;
 	
@@ -33,11 +37,16 @@ public class Firstflow {
 	}
 	
 	@Test
-	public void testhomepage() throws IOException{
+	public void testBookRoundTrip() throws IOException{
 		driver.get("http://www.cleartrip.com");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		SelectFlight sf = new SelectFlight(driver);
-		sf.BookRoundTrip();
+		Properties data = new BaseUtils().Readproperties();
+		sf.BookRoundTrip(data);
+		
+		ConfirmationPage cf = new ConfirmationPage(driver);
+		Assert.assertTrue(cf.isPaymentDisplayed());
 	}
 	
 	@Test(enabled=false)

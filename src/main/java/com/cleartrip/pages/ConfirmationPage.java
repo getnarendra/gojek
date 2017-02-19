@@ -31,6 +31,15 @@ public class ConfirmationPage {
 	By mobilenumber = By.id("mobileNumber");
 	By travellerBtn = By.id("travellerBtn");
 	
+	By creditCardNo = By.id("creditCardNumberDisp");
+	
+	public boolean isPaymentDisplayed(){
+		if(driver.findElement(creditCardNo).isDisplayed())
+			return true;
+		else
+			return false;
+	}
+	
 	public ConfirmationPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -52,33 +61,33 @@ public class ConfirmationPage {
 		title.selectByIndex(intselAdultTitle);
 	}
 	public void setAdultFName(String stradultFName, int index) {
-		driver.findElement(By.id("AdultFName" + index)).sendKeys(stradultFName);
+		driver.findElement(By.id("AdultFname" + index)).sendKeys(stradultFName);
 	}
 	public void setAdultLName(String stradultLName, int index) {
-		driver.findElement(By.id("AdultLName" + index)).sendKeys(stradultLName);
+		driver.findElement(By.id("AdultLname" + index)).sendKeys(stradultLName);
 	}
 	public void setSelChildTitle(int index) {
 		Select title = new Select(driver.findElement(By.id("ChildTitle" + index)));
 		title.selectByIndex(index);
 	}
 	public void setChildFName(String strchildFName, int index) {
-		driver.findElement(By.id("ChildFName" + index)).clear();
-		driver.findElement(By.id("ChildFName" + index)).sendKeys(strchildFName);
+		driver.findElement(By.id("ChildFname" + index)).clear();
+		driver.findElement(By.id("ChildFname" + index)).sendKeys(strchildFName);
 	}
 	public void setChildLName(String strchildLName, int index) {
-		driver.findElement(By.id("ChildLName" + index)).clear();
-		driver.findElement(By.id("ChildLName" + index)).sendKeys(strchildLName);
+		driver.findElement(By.id("ChildLname" + index)).clear();
+		driver.findElement(By.id("ChildLname" + index)).sendKeys(strchildLName);
 	}
-	public void setDob(int intdob) {
-		Select selDay = new Select(driver.findElement(dob));
+	public void setDob(int intdob, int index) {
+		Select selDay = new Select(driver.findElement(By.id("ChildDobDay" + index)));
 		selDay.selectByIndex(intdob);
 	}
-	public void setDom(int intdom) {
-		Select selMonth = new Select(driver.findElement(dom));
+	public void setDom(int intdom, int index) {
+		Select selMonth = new Select(driver.findElement(By.id("ChildDobMonth" + index)));
 		selMonth.selectByIndex(intdom);
 	}
-	public void setDoy(int intdoy) {
-		Select selYear = new Select(driver.findElement(doy));
+	public void setDoy(int intdoy, int index) {
+		Select selYear = new Select(driver.findElement(By.id("ChildDobYear" + index)));
 		selYear.selectByIndex(intdoy);
 	}
 	public void setMobilenumber(String strmobilenumber) {

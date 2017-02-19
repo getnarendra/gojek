@@ -15,10 +15,9 @@ public class SelectFlight {
 		this.driver = driver;
 	}
 	
-	public void BookRoundTrip() throws IOException{
+	public void BookRoundTrip(Properties data) throws IOException{
 		HomePage homepage = new HomePage(driver);
-		Properties data = new BaseUtils().Readproperties();
-		System.out.println("In Book");
+
 		homepage.setTripType();
 		homepage.setReturnDate(data.getProperty("ReturnDate"));
 		homepage.setDepartDate(data.getProperty("DepartDate", "01/06/2017"));
@@ -28,5 +27,8 @@ public class SelectFlight {
 		homepage.setSelectChildren(data.getProperty("SelectChildren"));
 		homepage.setDepartFrom(data.getProperty("DepartFrom"));
 		homepage.setSearchBtn();
+		
+		ConfirmBooking cf = new ConfirmBooking(driver);
+		cf.Execute(data);
 	}
 }
