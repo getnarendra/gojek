@@ -35,7 +35,7 @@ public class Firstflow {
 		driver.get("http://www.cleartrip.com");
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		WebElement trip_type = driver.findElement(By.id("RoundTrip"));
 		trip_type.click();
@@ -67,10 +67,10 @@ public class Firstflow {
 			
 		driver.findElement(By.id("SearchBtn")).click();
 		
-		WebElement divElement = driver.findElement(By.className("truncate"));
+/*		WebElement divElement = driver.findElement(By.className("truncate"));
 		String str = divElement.toString();
 		System.out.println("str : " +  str);
-		
+*/		
 //		String divsummary = "//div[contains(@class,'searchSummary')]";
 //		WebElement srchsumm = driver.findElement(By.xpath(divsummary));
 //		System.out.println("searhc summary : " + srchsumm.toString());
@@ -127,6 +127,13 @@ public class Firstflow {
 *///		Executor.executeScript("arguments[0].click();", element);
 
 //		driver.findElement(By.xpath("//button[@type=submit]")).click();
+
+		WebElement element1 = driver.findElement(By.xpath("//button[@type='submit'][2]"));
+
+		Actions actions1 = new Actions(driver);
+
+		actions1.moveToElement(element1).click().perform();
+
 		
 //		driver.findElement(By.xpath("//*[@id=\"flightForm\"]/section[2]/div[3]/div[3]/button[@type=\"submit\"]")).click();
 		
