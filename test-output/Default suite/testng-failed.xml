@@ -5,7 +5,7 @@
     <classes>
       <class name="cleartriptest.Firstflow">
         <methods>
-          <include name="Booktrip"/>
+          <include name="testhomepage"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

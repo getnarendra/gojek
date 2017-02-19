@@ -1,5 +1,6 @@
 package cleartriptest;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +17,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.cleartrip.actions.SelectFlight;
+
 import junit.framework.Assert;
 
 public class Firstflow {
@@ -30,6 +33,14 @@ public class Firstflow {
 	}
 	
 	@Test
+	public void testhomepage() throws IOException{
+		driver.get("http://www.cleartrip.com");
+		driver.manage().window().maximize();
+		SelectFlight sf = new SelectFlight(driver);
+		sf.BookRoundTrip();
+	}
+	
+	@Test(enabled=false)
 	public static void Booktrip(){
 
 		driver.get("http://www.cleartrip.com");
