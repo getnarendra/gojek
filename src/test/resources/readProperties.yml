@@ -1,0 +1,29 @@
+version : 1.0
+
+#properties
+url: http://www.cleartrip.com
+
+#Book Flight
+OneWayFlight :	
+	From : Bangalore
+	To : New Delhi
+	DepartDate : 01/06/2017
+	Adults : 2
+	Children : 2
+	Infants : 0
+
+#Book Round Trip
+RoundTripFlight:
+	trip_type : RoundTrip
+	From : Bangalore
+	To : New Delhi
+	DepartDate : 01/06/2017
+	ReturnDate : 01/07/2017
+	Adults : 2
+	Children : 2
+	Infants : 0
+	Flights : Default
+	insuranceconfirm : YES
+	username : getnarendra@yahoo.com
+	GuestNames : Random
+	

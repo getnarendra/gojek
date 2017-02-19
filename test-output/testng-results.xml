@@ -1,61 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14028" started-at="2017-02-18T10:18:55Z" finished-at="2017-02-18T10:19:09Z">
+  <suite name="Default suite" duration-ms="34185" started-at="2017-02-19T07:12:19Z" finished-at="2017-02-19T07:12:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14028" started-at="2017-02-18T10:18:55Z" finished-at="2017-02-18T10:19:09Z">
+    <test name="Default test" duration-ms="34185" started-at="2017-02-19T07:12:19Z" finished-at="2017-02-19T07:12:53Z">
       <class name="cleartriptest.Firstflow">
-        <test-method status="PASS" signature="setup()[pri:0, instance:cleartriptest.Firstflow@39aeed2f]" name="setup" is-config="true" duration-ms="3650" started-at="2017-02-18T15:48:55Z" finished-at="2017-02-18T15:48:58Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:cleartriptest.Firstflow@8bd1b6a]" name="setup" is-config="true" duration-ms="2923" started-at="2017-02-19T12:42:19Z" finished-at="2017-02-19T12:42:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="Booktrip()[pri:0, instance:cleartriptest.Firstflow@39aeed2f]" name="Booktrip" duration-ms="10354" started-at="2017-02-18T15:48:58Z" finished-at="2017-02-18T15:49:09Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:305)
-	at org.testng.Assert.assertEquals(Assert.java:315)
-	at cleartriptest.Firstflow.Booktrip(Firstflow.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="Booktrip()[pri:0, instance:cleartriptest.Firstflow@8bd1b6a]" name="Booktrip" duration-ms="31228" started-at="2017-02-19T12:42:22Z" finished-at="2017-02-19T12:42:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Booktrip -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:cleartriptest.Firstflow@8bd1b6a]" name="teardown" is-config="true" duration-ms="0" started-at="2017-02-19T12:42:53Z" finished-at="2017-02-19T12:42:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- cleartriptest.Firstflow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
